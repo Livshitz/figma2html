@@ -1,0 +1,212 @@
+[
+    {
+        "cssProps": {
+            "display": "flex",
+            "width": "390px",
+            "flex-direction": "column",
+            "align-items": "center"
+        },
+        "type": "FRAME",
+        "name": "Frame 372",
+        "children": [
+            {
+                "cssProps": {
+                    "display": "flex",
+                    "height": "72px",
+                    "padding": "0px 16px",
+                    "justify-content": "space-between",
+                    "align-items": "center",
+                    "align-self": "stretch",
+                    "border": "1px dashed rgba(0, 0, 0, 0.30)"
+                },
+                "type": "FRAME",
+                "name": ".row",
+                "children": [
+                    {
+                        "cssProps": {
+                            "width": "14px",
+                            "height": "34px",
+                            "background": "#D9D9D9"
+                        },
+                        "type": "RECTANGLE",
+                        "name": "Rectangle 144524"
+                    },
+                    {
+                        "cssProps": {
+                            "flex": "1 0 0",
+                            "color": "#121417",
+                            "text-align": "center",
+                            "font-feature-settings": "'dlig' on",
+                            "font-family": "Inter",
+                            "font-size": "18px",
+                            "font-style": "normal",
+                            "font-weight": "700",
+                            "line-height": "23px /* 127.778% */"
+                        },
+                        "characters": "Ethan Carter",
+                        "type": "TEXT",
+                        "name": "Ethan Carter"
+                    },
+                    {
+                        "cssProps": {
+                            "width": "24px",
+                            "height": "24px",
+                            "fill": "#121417"
+                        },
+                        "type": "RECTANGLE",
+                        "name": "Vector - 0"
+                    }
+                ]
+            },
+            {
+                "cssProps": {
+                    "display": "flex",
+                    "height": "265px",
+                    "padding": "0px 42px",
+                    "flex-direction": "column",
+                    "justify-content": "center",
+                    "align-items": "center",
+                    "gap": "10px",
+                    "align-self": "stretch",
+                    "border": "1px dashed rgba(0, 0, 0, 0.30)"
+                },
+                "type": "FRAME",
+                "name": ".col",
+                "children": [
+                    {
+                        "cssProps": {
+                            "width": "128px",
+                            "height": "128px",
+                            "min-height": "128px",
+                            "flex-shrink": "0",
+                            "border-radius": "64px",
+                            "background": "url(<path-to-image>) lightgray 50% / cover no-repeat"
+                        },
+                        "type": "FRAME",
+                        "name": "Depth 5, Frame 0"
+                    },
+                    {
+                        "cssProps": {
+                            "display": "flex",
+                            "width": "249px",
+                            "height": "29px",
+                            "justify-content": "center",
+                            "align-items": "center",
+                            "flex-shrink": "0"
+                        },
+                        "type": "INSTANCE",
+                        "name": ".title",
+                        "children": [
+                            {
+                                "cssProps": {
+                                    "width": "249px",
+                                    "flex-shrink": "0",
+                                    "align-self": "stretch",
+                                    "color": "#000",
+                                    "text-align": "center",
+                                    "font-family": "Inter",
+                                    "font-size": "24px",
+                                    "font-style": "normal",
+                                    "font-weight": "800",
+                                    "line-height": "normal"
+                                },
+                                "characters": "This is a title",
+                                "type": "TEXT",
+                                "name": ".title"
+                            }
+                        ]
+                    },
+                    {
+                        "cssProps": {
+                            "display": "flex",
+                            "align-items": "center",
+                            "gap": "10px"
+                        },
+                        "type": "INSTANCE",
+                        "name": ".text",
+                        "children": [
+                            {
+                                "cssProps": {
+                                    "width": "210px",
+                                    "color": "#000",
+                                    "text-align": "center",
+                                    "font-family": "Inter",
+                                    "font-size": "16px",
+                                    "font-style": "normal",
+                                    "font-weight": "400",
+                                    "line-height": "normal"
+                                },
+                                "characters": "Developer & Entrepreneur",
+                                "type": "TEXT",
+                                "name": ".text"
+                            }
+                        ]
+                    },
+                    {
+                        "cssProps": {
+                            "align-self": "stretch",
+                            "color": "#000",
+                            "text-align": "center",
+                            "font-family": "Inter",
+                            "font-size": "16px",
+                            "font-style": "normal",
+                            "font-weight": "400",
+                            "line-height": "normal"
+                        },
+                        "characters": "Building innovative solutions and sharing insights.",
+                        "type": "TEXT",
+                        "name": ".text"
+                    }
+                ]
+            },
+            {
+                "cssProps": {
+                    "display": "flex",
+                    "height": "265px",
+                    "padding": "0px 10px",
+                    "flex-direction": "column",
+                    "justify-content": "space-between",
+                    "align-items": "flex-start",
+                    "align-self": "stretch",
+                    "border": "1px dashed rgba(0, 0, 0, 0.30)"
+                },
+                "type": "FRAME",
+                "name": ".col",
+                "children": [
+                    {
+                        "cssProps": {
+                            "display": "flex",
+                            "width": "249px",
+                            "height": "29px",
+                            "padding-bottom": "1px",
+                            "justify-content": "center",
+                            "align-items": "center",
+                            "flex-shrink": "0"
+                        },
+                        "type": "INSTANCE",
+                        "name": ".title",
+                        "children": [
+                            {
+                                "cssProps": {
+                                    "width": "249px",
+                                    "flex-shrink": "0",
+                                    "align-self": "stretch",
+                                    "color": "#121417",
+                                    "font-feature-settings": "'dlig' on",
+                                    "font-family": "Inter",
+                                    "font-size": "22px",
+                                    "font-style": "normal",
+                                    "font-weight": "700",
+                                    "line-height": "28px /* 127.273% */"
+                                },
+                                "characters": "Code Libraries",
+                                "type": "TEXT",
+                                "name": ".title"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

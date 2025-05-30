@@ -1,0 +1,30 @@
+{
+  "name": "figma2html",
+  "version": "1.0.0",
+  "description": "TypeScript module to convert Figma JSON export to HTML",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "figma",
+    "html",
+    "converter"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.11.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.3.3"
+  },
+  "bin": {
+    "figma2html": "bin/figma2html.ts"
+  }
+}
