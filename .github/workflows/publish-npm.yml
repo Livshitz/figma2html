@@ -1,9 +1,5 @@
 name: Publish to npm
 
-# Set this to true to disable the workflow
-env:
-  DISABLE_PUBLISH_NPM: false
-
 on:
   push:
     branches:
@@ -11,7 +7,9 @@ on:
 
 jobs:
   publish-npm:
-    if: ${{ false && !contains(github.event.head_commit.message, '[skip-ci]') }}
+    # Comment this out to enable the workflow
+    # if: ${{ false }}
+    if: ${{ !contains(github.event.head_commit.message, '[skip-ci]') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write # Needed to checkout the repository AND push the version commit/tag
