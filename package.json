@@ -1,6 +1,6 @@
 {
   "name": "figma2html",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript module to convert Figma JSON export to HTML",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
