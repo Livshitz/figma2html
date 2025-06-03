@@ -38,10 +38,7 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
 
-      - name: Build README
-        run: bun run build-readme
-
-      - name: Build CSS assets
+      - name: Build
         run: bun run build
 
       - name: Bump version and commit changes
