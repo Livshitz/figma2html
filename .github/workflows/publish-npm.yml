@@ -1,4 +1,4 @@
-name: Publish x-css to npm
+name: Publish to npm
 
 on:
   push:
@@ -7,6 +7,9 @@ on:
 
 jobs:
   publish-npm:
+    # NOTE: To enable Github Actions for CI/CD remove 'false' condition 👇
+    if: false && ${{ !contains(github.event.head_commit.message, 'skip-ci') }}
+
     runs-on: ubuntu-latest
     permissions:
       contents: write # Needed to checkout the repository AND push the version commit/tag
@@ -61,3 +64,6 @@ jobs:
         run: |
           git tag "v$(node -p "require('./package.json').version")"
           git push --follow-tags 
+
+permissions:
+  contents: write
