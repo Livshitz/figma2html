@@ -163,4 +163,36 @@ describe('FigmaToHtmlConverter', () => {
       expect(rectangleIndex).toBeLessThan(textIndex);
     });
   });
+
+  describe('convertToPug', () => {
+    it('should convert a simple node to Pug', () => {
+      const simpleNode: FigmaNode = {
+        cssProps: { width: '100px', height: '100px' },
+        type: 'FRAME',
+        name: 'Simple Frame'
+      };
+      const pug = converter.convertToPug([simpleNode]);
+      expect(pug).toContain("div(data-figma-name='Simple Frame'");
+      expect(pug).toContain("data-figma-type='FRAME'");
+      expect(pug).toContain("style='width: 100px; height: 100px;'");
+    });
+
+    it('should convert nested nodes to Pug', () => {
+      const parentNode: FigmaNode = {
+        cssProps: { display: 'flex' },
+        type: 'FRAME',
+        name: 'Parent Frame',
+        children: [
+          {
+            cssProps: { width: '50px' },
+            type: 'RECTANGLE',
+            name: 'Child Rectangle'
+          }
+        ]
+      };
+      const pug = converter.convertToPug([parentNode]);
+      expect(pug).toContain("div(data-figma-name='Parent Frame'");
+      expect(pug).toContain("div(data-figma-name='Child Rectangle'");
+    });
+  });
 });

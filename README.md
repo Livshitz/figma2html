@@ -32,10 +32,38 @@ const converter = new FigmaToHtmlConverter();
 // Convert the JSON to HTML
 const html = converter.convert(figmaJson);
 
-// Use the generated HTML
+// Convert the JSON to Pug
+const pug = converter.convertToPug(figmaJson);
+
+// Use the generated HTML or Pug
 console.log(html);
+console.log(pug);
 // Or save it to a file
 writeFileSync('output.html', html);
+writeFileSync('output.pug', pug);
+```
+
+## CLI Usage
+
+You can now output Pug directly from the CLI:
+
+```bash
+bun run bin/figma2html.ts input.json --pug
+# or
+bun run bin/figma2html.ts input.json output.pug --pug
+```
+
+- Use `--pug` or `-p` to output Pug instead of HTML.
+- Output file extension will be `.pug` if not specified.
+
+## Run via NPX
+
+You can run the CLI directly without installing:
+
+```bash
+npx figma2html input.json --pug
+# or
+npx figma2html input.json output.pug --pug
 ```
 
 ## HTML Output Structure

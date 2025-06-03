@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "prepare": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
@@ -25,6 +26,9 @@
     "typescript": "^5.3.3"
   },
   "bin": {
-    "figma2html": "bin/figma2html.ts"
+    "figma2html": "dist/bin/figma2html.js"
+  },
+  "dependencies": {
+    "html2pug": "^4.0.0"
   }
 }

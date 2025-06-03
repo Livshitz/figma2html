@@ -1,4 +1,5 @@
 import { FigmaJSON, FigmaNode } from './types';
+import html2pug from 'html2pug';
 
 /**
  * FigmaToHtmlConverter
@@ -124,5 +125,20 @@ export class FigmaToHtmlConverter {
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#039;');
+  }
+  
+  /**
+   * Convert Figma JSON to Pug string
+   * @param figmaJson The Figma JSON export
+   * @returns Pug string representation
+   */
+  public convertToPug(figmaJson: FigmaJSON): string {
+    const html = this.convert(figmaJson);
+    return html2pug(html, { 
+      fragment: true, 
+      indent: 4, 
+      tabs: true,
+      commas: true,
+    });
   }
 }
