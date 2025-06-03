@@ -4,12 +4,17 @@ on:
   push:
     branches:
       - main # Trigger on pushes to the main branch
+      
+    # Add workflow-level condition to disable the workflow
+    # This disables the workflow entirely if set to false
+    # Remove or set to true to enable
+    # if: false
 
 jobs:
   publish-npm:
-    # NOTE: To enable Github Actions for CI/CD remove 'false' condition 👇
-    if: false && ${{ !contains(github.event.head_commit.message, 'skip-ci') }}
-
+    if: |
+      # Skip job if commit message contains '[skip-ci]'
+      !contains(github.event.head_commit.message, '[skip-ci]')
     runs-on: ubuntu-latest
     permissions:
       contents: write # Needed to checkout the repository AND push the version commit/tag
