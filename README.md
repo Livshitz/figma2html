@@ -2,6 +2,8 @@
 
 This TypeScript module converts Figma JSON exports to HTML with inline styles, preserving Figma element names and structure.
 
+**Companion:** [figma-to-json](https://www.figma.com/community/plugin/1399388645422727783/figma-to-json) is the Figma plugin that produces the JSON this module consumes ([source](https://github.com/Livshitz/figma-to-json)).
+
 ## Features
 
 - Converts Figma JSON export to HTML
