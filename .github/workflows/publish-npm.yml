@@ -55,16 +55,14 @@ jobs:
 
       # The npm token is NOT a per-repo secret — a repo-scoped NPM_TOKEN went stale and every publish
       # since 1.0.4 died on a 404 (npm reports an unauthorized scope as 404, not 403).
-      # Pull the canonical token from secrets-broker's secret store at publish time, so rotating it in one
-      # place fixes every repo. Same pattern as agentx + claude-revive. Only secret: BROKER_API_KEY.
-      - name: Pull NPM_TOKEN from secrets-broker secrets store
+      - name: Fetch npm token from secrets broker
         env:
-          BROKER_API_KEY: ${{ secrets.BROKER_API_KEY }}
+          TOKEN_URL: ${{ secrets.NPM_TOKEN_URL }}
+          APP_SECRET: ${{ secrets.NPM_BROKER_SECRET }}
         run: |
-          TOKEN=$(curl -fsS -H "Authorization: Bearer $BROKER_API_KEY" \
-            "https://secrets-broker.example/api/apps/REDACTED-APP-ID/env/NPM_TOKEN?environment=prod" \
+          TOKEN=$(curl -fsS -H "x-app-secret: $APP_SECRET" "$TOKEN_URL" \
             | jq -r '.value')
-          [ -n "$TOKEN" ] && [ "$TOKEN" != "null" ] || { echo "::error::could not fetch NPM_TOKEN from secrets-broker"; exit 1; }
+          [ -n "$TOKEN" ] && [ "$TOKEN" != "null" ] || { echo "::error::could not fetch NPM_TOKEN from secrets broker"; exit 1; }
           echo "::add-mask::$TOKEN"
           echo "NODE_AUTH_TOKEN=$TOKEN" >> "$GITHUB_ENV"
 
